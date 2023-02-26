@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button slot="start" (click)="goBack()">Go back to Homepage</ion-back-button>
+    <ion-title>list</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Task</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card *ngFor="let item of list">
+      <ion-item>
+        <ion-label>{{ item }}</ion-label>
+        <ion-button fill="outline" float-right (click)="delete(item)">Delete</ion-button>
+      </ion-item>
+    </ion-card>
+  </ion-list>
+
+</ion-content>

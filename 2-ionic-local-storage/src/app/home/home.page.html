@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Add a task
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-input type="text" placeholder="Item" [(ngModel)]="task"></ion-input>
+    <ion-button (click)="addItem(task)" [disabled]="task === ''">Add</ion-button>
+  </ion-item>
+  <ion-item>
+    <ion-button (click)="goToListPage()">Go to the list</ion-button>
+  </ion-item>
+</ion-content>
